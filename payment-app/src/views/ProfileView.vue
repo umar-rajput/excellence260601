@@ -1,12 +1,15 @@
 <template>
   <div class="profile-view">
-    <!-- <p>Profile view</p> -->
     <Profile></Profile>
+    <!-- <p>Payment button</p> -->
+
+    <!-- </stripe-checkout> -->
   </div>
 </template>
 
 <script>
 import Profile from "../components/Profile.vue";
+// import {StripeCheckout} from @vue-s
 export default {
   name: "ProfileView",
   components: { Profile },

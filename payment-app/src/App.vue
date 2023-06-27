@@ -6,14 +6,19 @@
     </nav> -->
     <!-- <router-view /> -->
 
-    <v-card>
+    <v-card class="bg">
       <v-layout>
-        <v-navigation-drawer expand-on-hover rail>
+        <v-navigation-drawer
+          v-model="drawer"
+          permanent
+          class="py-3"
+          style="background-color: #eddad3"
+        >
           <v-list>
             <v-list-item
-              prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-              title="Sandra Adams"
-              subtitle="sandra_a88@gmailcom"
+              prepend-avatar="http://localhost:8080/img/profileBlack.a64db219.png"
+              title="Umar Rajput"
+              subtitle="rajput@gmail.com"
             ></v-list-item>
           </v-list>
 
@@ -32,21 +37,39 @@
               value="payment"
               to="/payment"
             ></v-list-item>
-            <!-- <v-list-item
-              prepend-icon="mdi-star"
-              title="Starred"
-              value="starred"
-            ></v-list-item> -->
           </v-list>
         </v-navigation-drawer>
 
-        <v-main style="height: 100vh"><router-view /></v-main>
+        <v-main style="min-height: 100vh; background-color: #ecdad245">
+          <header
+            class="px-6 py-3 d-flex justify-space-between align-center"
+            style="background-color: #eddad3"
+          >
+            <v-btn color="grey-darken-4" @click.stop="drawer = !drawer">
+              <v-icon icon="mdi-menu"></v-icon>
+            </v-btn>
+            <v-avatar size="50">
+              <v-img src="./assets/logo2.png"></v-img
+            ></v-avatar>
+          </header>
+          <router-view />
+        </v-main>
       </v-layout>
     </v-card>
 
     <!-- <p>app</p> -->
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      drawer: null,
+    };
+  },
+};
+</script>
 
 <style>
 /* #app {
@@ -68,5 +91,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+} */
+/* nav {
+  background-color: #ecdad245;
+  overflow: hidden;
 } */
 </style>
