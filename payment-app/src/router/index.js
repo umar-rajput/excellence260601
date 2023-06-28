@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from '../views/HomeView.vue'
 import ProfileView from "../views/ProfileView.vue";
-import PaymentView from "../views/PaymentView.vue";
+// import PaymentView from "../views/PaymentView.vue";
+import StripeConView from "../views/StripeConView.vue";
 import SuccessView from "../views/SuccessView.vue";
 import ErrorView from "../views/ErrorView.vue";
 
@@ -14,7 +15,8 @@ const routes = [
   {
     path: "/payment",
     name: "payment",
-    component: PaymentView,
+    // component: PaymentView,
+    component: StripeConView,
   },
   {
     path: "/success",
